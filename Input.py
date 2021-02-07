@@ -14,9 +14,9 @@ sleepdata_hr = input("please enter time slept last night ")
 heart_rate = 73
 
 #Program calculates data based on heart rate at that moment / Time slept
-getmood = (heart_rate/int(sleepdata_hr))
+getmood = (heart_rate/float(sleepdata_hr))
 
 
 
-print(f"hello {get_name} {yourmode_Score} ", getmood)
+print(f"hello {get_name} {yourmode_Score}", getmood)
 
