@@ -18,5 +18,5 @@ getmood = (heart_rate/float(sleepdata_hr))
 
 
 
-print(f"hello {get_name} {yourmode_Score} ", round(getmood,4))
+print(f"hello {get_name} {yourmode_Score} ", round(getmood,3))
 
