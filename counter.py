@@ -9,18 +9,18 @@ third_num = input('enter third number')
 
 
 if float(first_num)%2 == 0:
-   evencount +=1
+   evencount = evencount + 1
 if float(second_num)%2 == 0:
-   evencount +=1
+    evencount = evencount + 1
 if float(third_num)%2 == 0:
-    evencount +=1
+     evencount = evencount + 1
 
-elif (float(first_num)%2 > 0):
-    oddcount +=1
-elif (float(second_num)%2 > 0):
-    oddcount +=1
-elif (float(third_num)%2 > 0):
-    oddcount +=1
+if (float(first_num)%2 > 0):
+    oddcount = oddcount+1
+if (float(second_num)%2 > 0):
+    oddcount = oddcount+1
+if (float(third_num)%2 > 0):
+    oddcount = oddcount+1
 
 
 
