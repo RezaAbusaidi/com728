@@ -7,4 +7,3 @@ for i in range(len(phrase)-1,-1,-1): #dont forget to say i in range, NOT i in ph
 ### does not make sense to reverse an index by putting (-) next to the stop
     print(phrase[i])
    
-    
