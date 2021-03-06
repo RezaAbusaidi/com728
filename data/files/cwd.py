@@ -1,8 +1,4 @@
 import os
-# path = os.getcwd()
-
-# for file in os.listdir(path):
-#     print(file)
 
 def cwd ():
     path = os.getcwd() #we define a variable called 'path' and based on that we ask the 'os' to give us the current working directory
