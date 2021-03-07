@@ -1,5 +1,5 @@
 import os
-filepath = ('/Users/user/Desktop/MSc AI and Data Science /DAT256x/Prepvirtualenvironment3.9.1/com728/data/files/txt/library.txt')
+filepath = './library.txt'
 def display_chars(filepath,chars):
     with open (filepath) as file:
         data = file.read(chars)  
@@ -16,9 +16,9 @@ def display_text(filepath):
     print (f'the full text is \n {display}')
 
 def run():
-    display_chars(filepath,5)
-    display_line(filepath)
-    display_text(filepath)
+    display_chars('library.txt',5)
+    display_line("library.txt")
+    display_text('library.txt')
 
 if __name__ == '__main__':
     run()
