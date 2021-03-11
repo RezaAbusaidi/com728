@@ -1,4 +1,4 @@
-# filepath = 'books.txt'
+filepath = 'books.txt'
 
 
 def search(filepath):
@@ -11,11 +11,11 @@ def search(filepath):
         for line in filepath:
            
             if line.startswith('Section'):
-                sections = sections + line
+                sections +=line
             else:
-                books = books + line
+                books += line
     print('Done')
-    print(sections,books)
+   
     return f'{sections}\n\n{books}'
 
 
@@ -28,7 +28,7 @@ def save(filepath, data):
 
 def run():
     data = search('books.txt')
-    save('booksectionss.txt', data)
+    save('booksectionz.txt', data)
 
 
 if __name__ == '__main__':
