@@ -1,6 +1,6 @@
 def movements():
     path = ["Move Forward", 10, "Move Backward", 5, "Move Left", 3, "Move Right", 1 ]
-    return path
+    return path # if you dont return you wont access later - TypeError: 'NoneType' object is not subscriptable
 def run():
     print ("Moving...")
     pathology = movements()
