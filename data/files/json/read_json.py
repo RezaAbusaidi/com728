@@ -14,11 +14,12 @@ def read(filename):
         population = data["population"]
         print(f"Population name is : {population}")
 
-        for bot in data["bots"]: # it locates the bot section of the json file("data") and uses it for iteration range. You have to mention that you want it to look in the bot section of the json file ["bots"]
+        # it locates the bot section of the json file("data")
+        for bot in data["bots"]:
+            # and uses it for iteration range using background built-in iteration function. You have to mention that you want it to look in the bot section of the json file ["bots"]
             name = bot["name"]
             stats = bot["stats"]
 
-        
             print(f"{name} has the following stats {stats}")
 
 
