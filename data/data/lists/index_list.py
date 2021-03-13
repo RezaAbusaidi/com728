@@ -9,5 +9,8 @@ def run():
     print(f"{pathology[4]} for {pathology[5]} steps")
     print(f"{pathology[6]} for {pathology[7]} steps")
 
+    for index in range(0, len(pathology), 2):
+        print(f"{pathology[index]} for {pathology[index + 1]} steps")
+
 if __name__ == '__main__':
     run()
