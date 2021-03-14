@@ -4,7 +4,7 @@ def likelihood():
 
 def run():
    value = likelihood()
-   print (f"Minimum likelihood of falling: {value}")
+   print (f"Minimum likelihood of falling: {value}%")
 
 if __name__ == '__main__':
     run()
