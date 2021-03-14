@@ -18,7 +18,7 @@ def menu():
 def run():
     route = []
     print("Working out escape route...")
-    for count in range(5):  # remember when returning an object, call the relevant function, the desired object will be called automatically
+    for i in range(5):  # remember when returning an object, call the relevant function, the desired object will be called automatically
         # menu fucntion will retun the user response and append to the mepty list "route". We do route.append(call the function that has the return)
         route.append(menu())
         print(f"Escape route: {route}")
