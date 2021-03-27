@@ -24,6 +24,7 @@ def display_menu():
     [2] Display the number of passengers that survived
     [3] Display the number of passengers per gender
     [4] Display the number of passengers per age group
+    [5] Display the number of survivors per age group
 
         """
     )
@@ -47,6 +48,7 @@ def display_num_survivors():
             num_survived += 1
     print(f"{num_survived} passengers survived")
 
+
 def display_passenger_per_gender():
     females = 0
     males = 0
@@ -58,6 +60,7 @@ def display_passenger_per_gender():
             females += 1
     print(f"females:{females}, males:{males}")
 
+
 def display_passengers_per_age_group():
     children = 0
     adults = 0
@@ -66,14 +69,43 @@ def display_passengers_per_age_group():
         if record[5] != "":
             age = float(record[5])
             if age < 18:
-                children +=1
+                children += 1
             elif age < 65:
                 adults += 1
             else:
-                elderly +=1
+                elderly += 1
     print(f"children: {children}, adults: {adults}, elderly: {elderly}")
 
-        
+
+def display_survivors_per_age_group():
+    children = 0
+    adults = 0
+    elderly = 0
+    children_surv = 0
+    adults_surv = 0
+    elderly_surv = 0
+    for i in records:
+        if i[5] != "":
+            age = float(i[5])
+            survived = int(i[1])
+
+            if age < 18:
+                children += 1
+                if survived == 1:
+                    children_surv += 1
+
+            elif age < 65:
+                adults += 1
+                if survived == 1:
+                    adults_surv += 1
+
+            else:
+                elderly += 1
+                if survived == 1:
+                    elderly_surv += 1
+
+    print(
+        f"children : {children_surv}/{children}, adults: {adults_surv}/{adults}, elderly: {elderly_surv}/{elderly}")
 
 
 def run():
@@ -87,9 +119,11 @@ def run():
     elif selected_option == 2:
         display_num_survivors()
     elif selected_option == 3:
-       display_passenger_per_gender()
-    elif selected_option ==4:
+        display_passenger_per_gender()
+    elif selected_option == 4:
         display_passengers_per_age_group()
+    elif selected_option == 5:
+        display_survivors_per_age_group()
     else:
         print("Error! Option not recognised!")
 
