@@ -10,7 +10,7 @@ def loadpath(file_path):
     with open(file_path) as file:
         csv_reader = csv.reader(file)
         headings = next(csv_reader)
-        # you should not forget to pit (csv_reader) instaed of (file) in the brackets
+        # you should not forget to put (csv_reader) instead of (file) in the brackets
         for i in (csv_reader):
             records.append(i)
         print("Done!")
@@ -58,6 +58,23 @@ def display_passenger_per_gender():
             females += 1
     print(f"females:{females}, males:{males}")
 
+def display_passengers_per_age_group():
+    children = 0
+    adults = 0
+    elderly = 0
+    for record in records:
+        if record[5] != "":
+            age = float(record[5])
+            if age < 18:
+                children +=1
+            elif age < 65:
+                adults += 1
+            else:
+                elderly +=1
+    print(f"children: {children}, adults: {adults}, elderly: {elderly}")
+
+        
+
 
 def run():
     loadpath(file_path)
@@ -71,6 +88,8 @@ def run():
         display_num_survivors()
     elif selected_option == 3:
        display_passenger_per_gender()
+    elif selected_option ==4:
+        display_passengers_per_age_group()
     else:
         print("Error! Option not recognised!")
 
