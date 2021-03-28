@@ -9,12 +9,12 @@ def display_keys(data): # you have to define a parameter, so you can pass return
         print(key)
 
 def display_values(data):
-    print("\nValues")
+    print("\nValues:")
     for value in data.values():
         print(value)
 
 def display_items(data):
-    print("\n Dictionary")
+    print("\n Dictionary:")
     for key,value in data.items():
         print(key,value)
 def run():
