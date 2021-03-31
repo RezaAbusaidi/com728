@@ -2,7 +2,7 @@ import database
 
 def menu():
     print("Please enter option")
-    print("[1] Desiplay Stock levels")
+    print("[1] Display Stock levels")
 
     selection = int(input("your selection"))
     return selection
